@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently --kill-others \"next dev\" \"json-server --watch ./server-data.json --port 3004\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -23,6 +23,7 @@
     "typescript": "^4.3.4"
   },
   "devDependencies": {
+    "concurrently": "^6.2.0",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.0"
   }

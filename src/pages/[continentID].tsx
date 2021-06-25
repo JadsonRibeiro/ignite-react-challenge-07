@@ -27,19 +27,25 @@ export default function Continent({ continent: {
                 <Image 
                     src={images[0].url} 
                     alt={images[0].alt} 
-                    w="full" 
-                    height={500}
+                    w="fit-content" 
+                    maxHeight={500}
                     zIndex="hide"
                 />
-                <Heading color="white" position="absolute" top="75%" left="17%">{name}</Heading>
+                <Heading 
+                    color="white" 
+                    position="absolute" 
+                    top={["50%", "75%"]}
+                    left={["50%", "17%"]}
+                    transform="translate(-50%, -50%)"
+                >{name}</Heading>
             </Box>
 
-            <Box maxW={1160} marginX="auto">
-                <Flex my="20">
-                    <Text flex={1}>
+            <Box maxW={1160} marginX="auto" px="6">
+                <Flex my="20" direction={["column", "row"]}>
+                    <Text flex={1} p="4">
                         {longDescription}
                     </Text>
-                    <Flex flex={1} justify="space-around">
+                    <Flex flex={1} justify="space-around" p="4">
                         <Box textAlign="center">
                             <Heading color="yellow.300">{countriesQuantity}</Heading>
                             <Text fontWeight="semibold">países</Text>
@@ -65,7 +71,7 @@ export default function Continent({ continent: {
                 <Box>
                     <Heading fontWeight="medium" mb="10">Cidades +100</Heading>
 
-                    <Grid gridTemplateColumns="repeat(auto-fit, 256px)" gap="8">
+                    <Grid gridTemplateColumns="repeat(auto-fit, 256px)" gap="8" justifyContent={["center", "center", "start"]}>
                         {biggestsCities.map(city => <City key={city.id} data={city} /> )}
                     </Grid>
                 </Box>

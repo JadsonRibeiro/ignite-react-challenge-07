@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Heading, Image, SimpleGrid, VStack, Text } from "@chakra-ui/react";
+import { Box, Divider, Flex, Heading, Image, SimpleGrid, VStack, Text, useBreakpointValue } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 
 import { Header } from "../components/Header";
@@ -11,48 +11,64 @@ interface HomeProps {
 }
 
 export default function Home({ continents }: HomeProps) {
+  const isBiggerThenMobileWide = useBreakpointValue({ base: false, md: true });
+
   return (
     <Flex direction="column" pb="20">
       <Header />
 
-      <Box position="relative" mb="20">
-        <Image src="./background.png" w="auto" position="absolute" zIndex="hide" />
+      <Box position="relative" mb="20" backgroundImage="./background.png" backgroundSize="cover">
         <Flex align="center" justify="center">
-          <Box px="6">
+          <Box p="6">
             <Heading color="white" lineHeight="tall" fontSize="xx-large" fontWeight="medium" mb="5">
               5 Continentes, <br />
               infinitas possibilidades.
             </Heading>
-            <Text color="lightInfo" maxW={524}>
+            <Text color="white" maxW={524}>
               Chegou a hora de tirar do papel a viagem que você sempre sonhou.
             </Text>
           </Box>
-          <Image src="./airplane.svg" mt="16" />
+          { isBiggerThenMobileWide && <Image src="./airplane.svg" mt="16" /> }
         </Flex>
       </Box>
       
-      <SimpleGrid minChildWidth={158} alignContent="center" justifyContent="center" mx="30">
-        <Flex direction="column" align="center">
-          <Image src="cocktail.svg" alt="cocktail" width={85} />
+      <Flex alignContent="center" justifyContent="space-around" wrap="wrap" mx="30">
+        <Flex direction={["row", "column"]} align="center" mx="6">
+          {isBiggerThenMobileWide 
+            ? <Image src="cocktail.svg" alt="cocktail" width={85} />
+            : <Box width={2} height={2} m="3" borderRadius="full" backgroundColor="yellow.500"></Box>
+          }
           <Text fontWeight="semibold">vida noturna</Text>
         </Flex>
-        <Flex direction="column" align="center">
-          <Image src="surf.svg" alt="surf" width={85} />
+        <Flex direction={["row", "column"]} align="center" mx="6">
+          {isBiggerThenMobileWide 
+            ? <Image src="surf.svg" alt="surf" width={85} />
+            : <Box width={2} height={2} m="3" borderRadius="full" backgroundColor="yellow.500"></Box>
+          }
           <Text fontWeight="semibold">praia</Text>
         </Flex>
-        <Flex direction="column" align="center">
-          <Image src="building.svg" alt="building" width={85} />
+        <Flex direction={["row", "column"]} align="center" mx="6">
+          {isBiggerThenMobileWide 
+            ? <Image src="building.svg" alt="building" width={85} />
+            : <Box width={2} height={2} m="3" borderRadius="full" backgroundColor="yellow.500"></Box>
+          }
           <Text fontWeight="semibold">moderno</Text>
         </Flex>
-        <Flex direction="column" align="center">
-          <Image src="museum.svg" alt="museum" width={85} />
+        <Flex direction={["row", "column"]} align="center" mx="6">
+          {isBiggerThenMobileWide 
+            ? <Image src="museum.svg" alt="museum" width={85} />
+            : <Box width={2} height={2} m="3" borderRadius="full" backgroundColor="yellow.500"></Box>
+          }
           <Text fontWeight="semibold">clássico</Text>
         </Flex>
-        <Flex direction="column" align="center">
-          <Image src="earth.svg" alt="earth" width={85} />
+        <Flex direction={["row", "column"]} align="center" mx="6">
+          {isBiggerThenMobileWide 
+            ? <Image src="earth.svg" alt="earth" width={85} />
+            : <Box width={2} height={2} m="3" borderRadius="full" backgroundColor="yellow.500"></Box>
+          }
           <Text fontWeight="semibold">e mais...</Text>
         </Flex>
-      </SimpleGrid>
+      </Flex>
 
       <Divider width={90} mt="20" mb="12" mx="auto" borderColor="gray.600" border={1} />
 
