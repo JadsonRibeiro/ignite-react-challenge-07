@@ -1,0 +1,117 @@
+{
+    "continents": [
+        {
+            "id": "europe",
+            "name": "Europa",
+            "shortDescription": "O continente mais antigo.",
+            "longDescription": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
+            "images": [
+                {
+                    "url": "http://localhost:3000/europe.png",
+                    "alt": "Europe"
+                },
+                {
+                    "url": "http://localhost:3000/europe-3.jpg",
+                    "alt": "Europe"
+                },
+                {
+                    "url": "http://localhost:3000/europe-2.jpg",
+                    "alt": "Europe"
+                }
+            ],
+            "countriesQuantity": 50,
+            "languagesQuantity": 60,
+            "biggestsCities": [
+                {
+                    "id": 1,
+                    "name": "Londres",
+                    "country": "Inglaterra",
+                    "image": {
+                        "url": "http://localhost:3000/england.png",
+                        "alt": "England"
+                    },
+                    "flag": {
+                        "url": "http://localhost:3000/england-flag.png",
+                        "alt": "England"
+                    }
+                },
+                {
+                    "id": 2,
+                    "name": "Paris",
+                    "country": "França",
+                    "image": {
+                        "url": "http://localhost:3000/paris.png",
+                        "alt": "Paris"
+                    },
+                    "flag": {
+                        "url": "http://localhost:3000/paris-flag.png",
+                        "alt": "Paris"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "africa",
+            "name": "África",
+            "shortDescription": "O berço da humanidade.",
+            "longDescription": "A África é o terceiro continente mais extenso com cerca de 30 milhões de quilômetros quadrados, cobrindo 20,3% da área total da terra firme do planeta. É o segundo continente mais populoso da Terra com cerca de um bilhão de pessoas, representando cerca de um sétimo da população mundial, e 54 países independentes",
+            "images": [
+                {
+                    "url": "http://localhost:3000/africa-1.jpg",
+                    "alt": "Europe"
+                },
+                {
+                    "url": "http://localhost:3000/africa-2.jpg",
+                    "alt": "Europe"
+                },
+                {
+                    "url": "http://localhost:3000/africa-3.jpg",
+                    "alt": "Europe"
+                }
+            ],
+            "countriesQuantity": 40,
+            "languagesQuantity": 98,
+            "biggestsCities": [
+                {
+                    "id": 1,
+                    "name": "Lagos",
+                    "country": "Nigéria",
+                    "image": {
+                        "url": "http://localhost:3000/england.png",
+                        "alt": "England"
+                    },
+                    "flag": {
+                        "url": "http://localhost:3000/england-flag.png",
+                        "alt": "England"
+                    }
+                },
+                {
+                    "id": 2,
+                    "name": "Cairo",
+                    "country": "Egito",
+                    "image": {
+                        "url": "http://localhost:3000/paris.png",
+                        "alt": "Paris"
+                    },
+                    "flag": {
+                        "url": "http://localhost:3000/paris-flag.png",
+                        "alt": "Paris"
+                    }
+                },
+                {
+                    "id": 3,
+                    "name": "Kinshassa",
+                    "country": "Congo",
+                    "image": {
+                        "url": "http://localhost:3000/paris.png",
+                        "alt": "Paris"
+                    },
+                    "flag": {
+                        "url": "http://localhost:3000/paris-flag.png",
+                        "alt": "Paris"
+                    }
+                }
+            ]
+        }
+    ]
+}
